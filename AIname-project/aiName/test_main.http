@@ -1,0 +1,50 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/hello/User
+Accept: application/json
+
+###
+GET http://127.0.0.1:8000/mail/test?email=644992865@qq.com
+
+###
+GET http://127.0.0.1:8000/auth/code?email=644992865@qq.com
+
+###
+POST http://127.0.0.1:8000/auth/register
+Content-Type: application/json
+
+{
+  "email": "644992865@qq.com",
+  "username": "wangzx",
+  "password": "1111111",
+  "confirm_password": "1111111",
+  "code": "7099"
+
+}
+
+###
+POST http://127.0.0.1:8000/auth/login
+Content-Type: application/json
+
+{
+  "email": "644992865@qq.com",
+  "password": "1111111"
+
+}
+
+###
+POST http://127.0.0.1:8000/namew
+Content-Type: application/json
+
+{
+  "surname": "王",
+  "length": "不限",
+  "gender": "男",
+  "other": "霸气一点"
+
+}
